@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Showroom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1549924231-f129b911e442') center/cover;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .car-section {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .car-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .car-card:hover {
+      transform: scale(1.03);
+    }
+    .car-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .car-info {
+      padding: 15px;
+    }
+    .car-info h3 {
+      margin: 0 0 10px;
+    }
+    .price {
+      color: #007bff;
+      font-weight: bold;
+    }
+    button {
+      background: linear-gradient(to right, #ff512f, #dd2476);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏎️ Elite Motors</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Cars</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    Find Your Dream Car Today
+  </div>
+
+  <section class="car-section">
+    <div class="car-card">
+      <img src="https://wallpaperaccess.com/full/819627.jpg" alt="Lamborghini Huracán">
+      <div class="car-info">
+        <h3>Lamborghini Huracán</h3>
+        <p class="price">$210,000</p>
+        <p>V10 engine, 610 HP, 0-100 km/h in 3.2s.</p>
+        <button onclick="buyCar('Lamborghini Huracán')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.mqbsRIWWIqXSKPsAmdQeCgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ferrari 488 GTB">
+      <div class="car-info">
+        <h3>Ferrari 488 GTB</h3>
+        <p class="price">$245,000</p>
+        <p>3.9L twin-turbo V8, 670 HP, 0-100 km/h in 3.0s.</p>
+        <button onclick="buyCar('Ferrari 488 GTB')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://cdni.autocarindia.com/ExtraImages/20240312054442_Porsche_911_S_T.jpg" alt="Porsche 911 Turbo">
+      <div class="car-info">
+        <h3>Porsche 911 Turbo</h3>
+        <p class="price">$180,000</p>
+        <p>3.8L twin-turbo flat-6, 572 HP, 0-100 km/h in 2.7s.</p>
+        <button onclick="buyCar('Porsche 911 Turbo')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Elite Motors - All Rights Reserved
+  </footer>
+
+  <script>
+    function buyCar(carName) {
+      alert(`Thank you for your interest in the ${carName}! Our sales team will contact you soon.`);
+    }
+  </script>
+
+</body>
+</html>
